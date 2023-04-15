@@ -1,6 +1,6 @@
-import java.io.IOException;
 
 public class quizMaker {
+    
     
     public String printAnswers(String[] listA){
         String result = "";
@@ -9,12 +9,29 @@ public class quizMaker {
         }
         return result;
     }
-    public boolean checkAnswer(String[] listB, String choice, String answer){
-        for (int index = 0; index < listB.length; index++){
-        if(choice.toLowerCase().equals(answer.toLowerCase())){
-            return true;
-        }
-        }
-        return false;
+// public String checkFirstPlace(ArrayList<Score> ExList){
+//     String msg = "";
+//     String noWinner = "No perfect scores!";
+//     for(int index = 0; index < ExList.size(); index++){
+//         if(ExList.get(index).getPoints() == 3){
+//             msg += String.valueOf(ExList.get(index)); 
+//         }
+//         else{
+//             return noWinner;
+//         }
+//         return msg;
+//         } 
+// return msg;
+//         }
+public boolean checkAnswer(String[] listA, String answer){
+    for(int index = 0; index < listA.length; index++){
+    if(answer.toLowerCase().equals(listA[index].toLowerCase())){
+        return true;
     }
+    }
+    return false;
 }
+
+}
+        
+
